@@ -7,15 +7,15 @@ OBJ			= $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME):
-	$(CC) $(FLAGS) -c -I ./ $(SRC)
-	ar rc $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@$(CC) $(FLAGS) -c -I ./ $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 clean:
-	rm -rf $(OBJ)
+	@rm -rf $(OBJ)
 
 fclean: clean
-	rm -rf $(NAME)
+	@rm -rf $(NAME)
 
 re: fclean all
 
