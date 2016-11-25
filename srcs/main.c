@@ -6,7 +6,7 @@
 /*   By: jmarin-h <jmarin-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/17 18:40:48 by jmarin-h          #+#    #+#             */
-/*   Updated: 2016/11/24 14:21:01 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/11/25 13:24:02 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int			main(int argc, char **argv)
 	{
 		fd = open(argv[1], O_RDONLY);
 		len = check_size(fd);
-		if (len == 0 || fd == -1)
+		if (len <= 0 || fd == -1)
 			return (ft_print_error());
 		close(fd);
 		fd = open(argv[1], O_RDONLY);

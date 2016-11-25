@@ -6,7 +6,7 @@
 /*   By: glouyot <glouyot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 17:25:27 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/24 14:13:39 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/11/25 13:17:50 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,7 @@
 # include <fcntl.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdio.h>
 # include "./libft/libft.h"
-
-# define DEBUG printf("Line %i, File %s\n", __LINE__, __FILE__);
 
 typedef struct		s_check
 {

@@ -6,7 +6,7 @@
 /*   By: glouyot <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/22 13:16:22 by glouyot           #+#    #+#             */
-/*   Updated: 2016/11/24 13:22:46 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/11/25 13:27:14 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ t_etri		*ft_tetris_init(char **str, int len)
 	t_etri	*tmp;
 
 	j = 0;
+	len = len == 0 ? 1 : len;
 	if (!(tetris = (t_etri *)malloc(sizeof(t_etri))))
 		return (NULL);
 	tmp = tetris;

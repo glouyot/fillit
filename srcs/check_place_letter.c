@@ -6,7 +6,7 @@
 /*   By: jmarin-h <jmarin-h@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/16 23:15:03 by jmarin-h          #+#    #+#             */
-/*   Updated: 2016/11/25 11:12:08 by glouyot          ###   ########.fr       */
+/*   Updated: 2016/11/25 13:18:54 by glouyot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,8 @@ t_check		*check_init(int nb_tetro)
 	check->buf[nb_tetro] = NULL;
 	while (check->mllc >= 0)
 	{
-		check->buf[check->mllc] = malloc(sizeof(char) * 21);
+		if (!(check->buf[check->mllc] = malloc(sizeof(char) * 21)))
+			return (NULL);
 		check->buf[check->mllc][20] = '\n';
 		check->mllc--;
 	}
